@@ -21,12 +21,24 @@
         <DockPanel Grid.Column="1" Background="LightGreen">
             <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30" Grid.Row="0" >Готово</TextBlock>
         </DockPanel>
-        
+
         <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1">
-            <TextBlock TextWrapping="Wrap" FontWeight="Black" FontSize="20"   x:Name="NumberChange"></TextBlock>
+            <ListView  FontWeight="Black" FontSize="20"   x:Name="ListView1" Grid.ColumnSpan="2" Loaded="NumberChange_Loaded">
+                <ListViewItem>
+                    <StackPanel>
+                        <!--<TextBlock TextWrapping="Wrap" FontWeight="Black" FontSize="20"  Name="NumberChange"></TextBlock>-->
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1">
-            <TextBlock TextWrapping="Wrap" FontWeight="Black" FontSize="20"  Name="NumberChangeReady"></TextBlock>
+            <ListView  FontWeight="Black" FontSize="20"   x:Name="ListView2" Grid.ColumnSpan="2" >
+                <ListViewItem>
+                    <StackPanel>
+                        <!--<TextBlock TextWrapping="Wrap" FontWeight="Black" FontSize="20"  Name="NumberChange"></TextBlock>-->
+                    </StackPanel>
+                </ListViewItem>
+            </ListView>
         </Border>
     </Grid>
 </Window>
