@@ -124,7 +124,7 @@ namespace Table
                     if (listViewItem.Content == null)
                     {
                         main.ListView2.Items.Remove(main.ListView2.SelectedItem);
-                        main.ListView1.Items.Remove(main.ListView1.SelectedItem);
+                     
                     }
                     main.ListView1.Items.Remove(main.ListView1.SelectedItem);
 

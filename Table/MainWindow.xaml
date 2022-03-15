@@ -23,7 +23,7 @@
         </DockPanel>
 
         <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1">
-            <ListView  FontWeight="Black" FontSize="20"   x:Name="ListView1" Grid.ColumnSpan="2" Loaded="NumberChange_Loaded">
+            <ListView  FontWeight="Black" FontSize="20"   x:Name="ListView1" Grid.ColumnSpan="2" >
                 <ListViewItem>
                     <StackPanel>
                         <!--<TextBlock TextWrapping="Wrap" FontWeight="Black" FontSize="20"  Name="NumberChange"></TextBlock>-->
