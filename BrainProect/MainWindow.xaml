@@ -1,0 +1,35 @@
+﻿<Window x:Class="BrainProect.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrainProect"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="600"></ColumnDefinition>
+        <ColumnDefinition></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+    <Canvas Grid.Column="0">
+
+        <TextBlock Canvas.Left="209" FontSize="30" FontWeight="Black">Терминалы</TextBlock>
+        <StackPanel  Height="300" Width="200" Canvas.Left="70" Canvas.Top="60">
+            <Border BorderBrush="Black" BorderThickness="1" Height="300" Width="200">
+                <Button Height="40" VerticalAlignment="Bottom" FontSize="20" FontWeight="Black" Name="BtnTermAdd1" Click="BtnTermAdd1_Click">Заказать</Button>
+            </Border>
+        </StackPanel>
+        <StackPanel Height="300" Width="200" Margin="50" Canvas.Left="278" Canvas.Top="10">
+            <Border BorderBrush="Black" BorderThickness="1" Height="300" Width="200">
+                <Button Height="40" VerticalAlignment="Bottom" FontSize="20" FontWeight="Black" Name="BtnTermAdd2" Click="BtnTermAdd2_Click">Заказать</Button>
+            </Border>
+        </StackPanel>
+    </Canvas>
+    <StackPanel Grid.Column="1" Background="AliceBlue">
+        <TextBlock HorizontalAlignment="Center" FontSize="20">Kacca 1</TextBlock>
+        <Button Height="40" Margin="0,20,0,40" FontSize="20" Name="BtnCashAdd1" Click="BtnCashAdd1_Click">Заказать</Button>
+        <TextBlock HorizontalAlignment="Center" FontSize="20">Касса 2</TextBlock>
+        <Button Height="40" Margin="0,20,0,40" FontSize="20" Name="BtnCashAdd2" Click="BtnCashAdd2_Click">Заказать</Button>
+    </StackPanel>
+    </Grid>
+</Window>

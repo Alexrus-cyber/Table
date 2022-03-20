@@ -1,0 +1,36 @@
+﻿<Window x:Class="BrainProect.Buyer"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BrainProect"
+        mc:Ignorable="d"
+        Title="Buyer" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel Background="Brown">
+            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30" Grid.Row="0">Заказы</TextBlock>
+        </DockPanel>
+        <DockPanel Grid.Column="1" Background="LightGreen">
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30" Grid.Row="0" >Готово</TextBlock>
+        </DockPanel>
+
+        <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1">
+            <ListView  FontWeight="Black" FontSize="20"   x:Name="ListView1" Grid.ColumnSpan="2" >
+
+            </ListView>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Grid.Column="1" Grid.Row="1">
+            <ListView  FontWeight="Black" FontSize="20"   x:Name="ListView2" Grid.ColumnSpan="2" >
+
+            </ListView>
+        </Border>
+    </Grid>
+</Window>
