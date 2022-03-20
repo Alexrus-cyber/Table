@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Speech.Synthesis;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -22,14 +23,17 @@ namespace BrainProect
     {
         public List<string> list = new List<string>();
         private Coock coock;
-        private Buyer buyer;
+        private Buyer buyer; 
+        private SpeechSynthesizer synthesizer;
+
         public byte f = 0;
         public string[] burgers = new string[] { "Бургер", "Картошка фри", " Кола ", "Чизбургер", "Креветки ", "Молочный коктейль" };
 
         public MainWindow()
         {
             InitializeComponent();
-            coock = new Coock(this);
+            synthesizer = new SpeechSynthesizer();
+        coock = new Coock(this);
             coock.Show();
    
         }

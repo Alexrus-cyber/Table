@@ -41,7 +41,6 @@ namespace BrainProect
             this.main = main;
             Manager.MainFrame = buyer.ListView1;
             synthesizer = new SpeechSynthesizer();
-           
             _timer = new DispatcherTimer();
             InitializeComponent();
         }
@@ -53,7 +52,6 @@ namespace BrainProect
             _timer.Tick += new EventHandler(timerTick);
             _timer.Interval = new TimeSpan(0, 0, 0, 0 , 1000);
             _timer.Start();
-
             if (s == 10)
             {
                 _timer.Tick += new EventHandler(timerTick);
@@ -63,17 +61,20 @@ namespace BrainProect
 
             foreach (var item in main.list)               // Проверка листа на выделение, удаление выделенных элементов.
             {
+                
                 if (listViewItem != null)
                 {
                         listViewItem.IsSelected = listViewItem.IsSelected;
-                 
                         if (listViewItem.Content == listViewItem.Content)
                             {
                                 Manager.MainFrame.Items.Remove(ListView3.SelectedItem);
                             }
                         buyer.ListView2.Items.Add(ListView3.SelectedItem);
-                        
-                        ListView3.Items.Remove(ListView3.SelectedItem);
+                    if (ListView3.SelectedItem != null)
+                    {
+                        synthesizer.Speak(ListView3.SelectedItem.ToString());
+                    }
+                    ListView3.Items.Remove(ListView3.SelectedItem);
                         
                     if (listViewItem.Content == null)
                             {
