@@ -21,7 +21,7 @@ namespace BrainProect
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<string> list = new List<string>();
+        public List<Organ> list = new List<Organ>();
         private Coock coock;
         private Buyer buyer; 
         private SpeechSynthesizer synthesizer;
@@ -42,17 +42,21 @@ namespace BrainProect
         {
             Random random = new Random();
             string text;
+            Organ o = new Organ();
+
             do
             {
                 int a = random.Next(100);
                 char b = (char)random.Next('A', 'Z');
                 text = b + "" + a;
-                if (!list.Contains(text)) list.Add(text);
-            } while (!list.Contains(text));
+                o.Id = text;
+                if (!list.Contains(o)) list.Add(o);
+            } while (!list.Contains(o));
+            o.Description = "Супер пупер описание";
             int c = random.Next(6);
             
-            Manager.MainFrame.Items.Add(text);
-            coock.ListView3.Items.Add(text);
+            Manager.MainFrame.Items.Add(o);
+            coock.ListView3.Items.Add(o);
             //switch (c)
             //{
             //    case 1:
@@ -77,7 +81,7 @@ namespace BrainProect
 
         }
 
-        private void BtnTermAdd2_Click(object sender, RoutedEventArgs e)
+        /*private void BtnTermAdd2_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
             string text;
@@ -90,9 +94,9 @@ namespace BrainProect
             } while (!list.Contains(text));
             Manager.MainFrame.Items.Add(text);
             coock.ListView3.Items.Add(text);
-        }
+        }*/
 
-        private void BtnCashAdd1_Click(object sender, RoutedEventArgs e) // Создание рандомных заказов
+        /*private void BtnCashAdd1_Click(object sender, RoutedEventArgs e) // Создание рандомных заказов
         {
             Random random = new Random();
             string text;
@@ -106,9 +110,9 @@ namespace BrainProect
             Manager.MainFrame.Items.Add(text);
             coock.ListView3.Items.Add(text);
 
-        }
+        }*/
 
-        private void BtnCashAdd2_Click(object sender, RoutedEventArgs e)
+        /*private void BtnCashAdd2_Click(object sender, RoutedEventArgs e)
         {
             Random random = new Random();
             string text;
@@ -121,6 +125,6 @@ namespace BrainProect
             } while (!list.Contains(text));
             Manager.MainFrame.Items.Add(text);
             coock.ListView3.Items.Add(text);
-        }
+        }*/
     }
 }

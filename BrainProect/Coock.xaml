@@ -25,16 +25,18 @@
 
         <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="100"></ColumnDefinition>
-                    <ColumnDefinition></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <ListView  FontWeight="Black" FontSize="20" Grid.Column="0"  x:Name="ListView3" Grid.ColumnSpan="2" >
 
+                <ListView FontWeight="Black" FontSize="20" Grid.Column="0"  x:Name="ListView3" Grid.ColumnSpan="2" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <WrapPanel>
+                                <TextBlock Margin="0 0 10 0" Text="{Binding Id}"/>
+                                <TextBlock Text="{Binding Description}"/>
+                            </WrapPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
-                <ListView  FontWeight="Black" FontSize="20" Grid.Column="1"  x:Name="ListView4" Grid.ColumnSpan="2" >
-                            
-                </ListView>
+             
             </Grid>
         </Border>
         <Button Grid.Column="1" Grid.Row="1" Height="100" Content="Готово" FontSize="30" FontWeight="Black" Click="Button_Click">

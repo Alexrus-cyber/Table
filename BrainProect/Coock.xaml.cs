@@ -32,7 +32,7 @@ namespace BrainProect
         public Coock()
         {
             InitializeComponent();
-        
+            //ListView3.ItemsSource = Manager.MainFrame.Items;
         }
         public Coock(MainWindow main)
         {
@@ -72,7 +72,7 @@ namespace BrainProect
                         buyer.ListView2.Items.Add(ListView3.SelectedItem);
                     if (ListView3.SelectedItem != null)
                     {
-                        synthesizer.Speak(ListView3.SelectedItem.ToString());
+                        synthesizer.Speak("заказ"+ListView3.SelectedItem.ToString()+"готов");
                     }
                     ListView3.Items.Remove(ListView3.SelectedItem);
                         

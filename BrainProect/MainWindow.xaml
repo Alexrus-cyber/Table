@@ -16,20 +16,20 @@
         <TextBlock Canvas.Left="209" FontSize="30" FontWeight="Black">Терминалы</TextBlock>
         <StackPanel  Height="300" Width="200" Canvas.Left="70" Canvas.Top="60">
             <Border BorderBrush="Black" BorderThickness="1" Height="300" Width="200">
-                <Button Height="40" VerticalAlignment="Bottom" FontSize="20" FontWeight="Black" Name="BtnTermAdd1" Click="BtnTermAdd1_Click">Заказать</Button>
+                    <Button Height="40" VerticalAlignment="Bottom" FontSize="20" FontWeight="Black" Name="BtnTermAdd1" Click="BtnTermAdd1_Click">Заказать</Button>
             </Border>
         </StackPanel>
         <StackPanel Height="300" Width="200" Margin="50" Canvas.Left="278" Canvas.Top="10">
             <Border BorderBrush="Black" BorderThickness="1" Height="300" Width="200">
-                <Button Height="40" VerticalAlignment="Bottom" FontSize="20" FontWeight="Black" Name="BtnTermAdd2" Click="BtnTermAdd2_Click">Заказать</Button>
+                    <Button Height="40" VerticalAlignment="Bottom" FontSize="20" FontWeight="Black" Name="BtnTermAdd2" Click="BtnTermAdd1_Click">Заказать</Button>
             </Border>
         </StackPanel>
     </Canvas>
     <StackPanel Grid.Column="1" Background="AliceBlue">
         <TextBlock HorizontalAlignment="Center" FontSize="20">Kacca 1</TextBlock>
-        <Button Height="40" Margin="0,20,0,40" FontSize="20" Name="BtnCashAdd1" Click="BtnCashAdd1_Click">Заказать</Button>
+            <Button Height="40" Margin="0,20,0,40" FontSize="20" Name="BtnCashAdd1" Click="BtnTermAdd1_Click">Заказать</Button>
         <TextBlock HorizontalAlignment="Center" FontSize="20">Касса 2</TextBlock>
-        <Button Height="40" Margin="0,20,0,40" FontSize="20" Name="BtnCashAdd2" Click="BtnCashAdd2_Click">Заказать</Button>
+            <Button Height="40" Margin="0,20,0,40" FontSize="20" Name="BtnCashAdd2" Click="BtnTermAdd1_Click">Заказать</Button>
     </StackPanel>
     </Grid>
 </Window>
