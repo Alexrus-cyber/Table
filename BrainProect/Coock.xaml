@@ -20,7 +20,7 @@
             <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30" Grid.Row="0">Заказы</TextBlock>
         </DockPanel>
         <DockPanel Grid.Column="1" Background="LightGreen">
-            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30" Grid.Row="0" >Готово</TextBlock>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="10" FontSize="30" Grid.Row="0" >Повар</TextBlock>
         </DockPanel>
 
         <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="1">

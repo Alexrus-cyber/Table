@@ -27,7 +27,7 @@ namespace BrainProect
         private SpeechSynthesizer synthesizer;
 
         public byte f = 0;
-        public string[] burgers = new string[] { "Бургер", "Картошка фри", " Кола ", "Чизбургер", "Креветки ", "Молочный коктейль" };
+        public string[] burgers = new string[] { " Бургер", " Картошка фри", " Кола ", " Чизбургер", " Креветки ", " Молочный коктейль", " Бизнес ланч ", " Баскет ", " Сырные шарики" };
 
         public MainWindow()
         {
@@ -52,8 +52,10 @@ namespace BrainProect
                 o.Id = text;
                 if (!list.Contains(o)) list.Add(o);
             } while (!list.Contains(o));
-            int c = random.Next(6);
-            o.Description = burgers[c] + burgers[c];
+            int c = random.Next(8);
+            int g = random.Next(8);
+            int m = random.Next(8);
+            o.Description = burgers[c] + burgers[g] + burgers[m];
             
             Manager.MainFrame.Items.Add(o);
             coock.ListView3.Items.Add(o);
