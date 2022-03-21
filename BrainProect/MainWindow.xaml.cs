@@ -52,8 +52,8 @@ namespace BrainProect
                 o.Id = text;
                 if (!list.Contains(o)) list.Add(o);
             } while (!list.Contains(o));
-            o.Description = "Супер пупер описание";
             int c = random.Next(6);
+            o.Description = burgers[c] + burgers[c];
             
             Manager.MainFrame.Items.Add(o);
             coock.ListView3.Items.Add(o);
